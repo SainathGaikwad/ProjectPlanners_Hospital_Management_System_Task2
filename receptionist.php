@@ -110,107 +110,102 @@ if (isset($_POST['UPDATEEMP'])) {
 <html lang="en-US">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-    <title>Receptionist</title>
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+  <title>Receptionist</title>
+  </style>
 </head>
 
 <body>
-    <div class="wrapper">
+  <div class="wrapper">
 
 
-        <div class="title">
-            <h1 style="text-align:center;">Welcome,</span> <?php echo $login_session; ?>!</h1>
-            <a href="logout.php">Logout</a>
-        </div>
+    <div class="title">
+      <h1 style="text-align:center;">Welcome,</span> <?php echo $login_session; ?>!</h1>
+      <a href="logout.php">Logout</a>
+    </div>
 
-        <div id="newmasonry" style=" display:inline-block; width:500px;float:left;">
-            <div id="new" style="background-color:pink;">
-                <h2 style="text-align:center;">PATIENT INFORMATION</h2>
-                <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-                    <p>
-                        <label for="patientid">Patient ID: </label>
-                        <input id="patientid" name="patient_id" placeholder="Enter patient id:" type="text"><br>
-                    </p>
-                    <p>
-                        <label for="firstname">First Name: </label>
-                        <input id="firstname" name="first_name" placeholder="Enter patient first name:" type="text"><br>
-                    </p>
-                    <p>
-                        <label for="middleinitial">Name: </label>
-                        <input id="middleinitial" name="middle_initial" placeholder="Enter patient middle initial:"
-                            type="text"><br>
-                    </p>
-                    <p>
-                        <label for="lastname">Last Name: </label>
-                        <input id="lastname" name="last_name" placeholder="Enter patient last name:" type="text"><br>
-                    </p>
-                    <p>
-                        <input type="submit" name="SUBMIT" value="    Add Patient Information    ">
-                    </p>
-                    <?php echo $errorMessage; ?>
-                </form>
+    <div id="newmasonry" style=" display:inline-block; width:500px;float:left;">
+      <div id="new" style="background-color:pink;">
+        <h2 style="text-align:center;">PATIENT INFORMATION</h2>
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+          <p>
+            <label for="patientid">Patient ID: </label>
+            <input id="patientid" name="patient_id" placeholder="Enter patient id:" type="text"><br>
+          </p>
+          <p>
+            <label for="firstname">First Name: </label>
+            <input id="firstname" name="first_name" placeholder="Enter patient first name:" type="text"><br>
+          </p>
+          <p>
+            <label for="middleinitial">Name: </label>
+            <input id="middleinitial" name="middle_initial" placeholder="Enter patient middle initial:" type="text"><br>
+          </p>
+          <p>
+            <label for="lastname">Last Name: </label>
+            <input id="lastname" name="last_name" placeholder="Enter patient last name:" type="text"><br>
+          </p>
+          <p>
+            <input type="submit" name="SUBMIT" value="    Add Patient Information    ">
+          </p>
+          <?php echo $errorMessage; ?>
+        </form>
 
-            </div>
+      </div>
 
-        </div>
+    </div>
 
-        <div id="newmasonry" style="display:inline;">
-            <div id="new2" style=" display:inline; background-color:pink;">
-                <h2 style="text-align:center;">EMPLOYEE INFORMATION</h2>
-                <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-                    <p>
-                        <label for="employeeid">Employee ID: </label>
-                        <input id="employeeid" name="emp_id" placeholder="Enter employee id:" type="text"><br>
-                    </p>
-                    <p>
-                        <label for="employeetype">Employee Type: </label>
-                        <input id="employeetype" name="emp_type" placeholder="Enter employee type:" type="text"><br>
-                    </p>
-                    <p>
-                        <label for="empfirstname">Employee First Name: </label>
-                        <input id="empfirstname" name="emp_first_name" placeholder="Enter employee first name:"
-                            type="text"><br>
-                    </p>
-                    <p>
-                        <label for="emplastname">Employee Last Name: </label>
-                        <input id="emplastname" name="emp_last_name" placeholder="Enter employee last name:"
-                            type="text"><br>
-                    </p>
-                    <p>
-                        <input type="submit" name="INSERTEMP" value="   Insert Employee Information    ">
-                    </p><br>
-                    <p>
-                        <label for="employeeid">Employee ID: </label>
-                        <input id="employeeid" name="nemp_id" placeholder="Enter employee id:" type="text"><br>
-                    </p>
-                    <p>
-                        <label for="empnfirstname">Employee First Name: </label>
-                        <input id="empnfirstname" name="nemp_first_name" placeholder="Enter new first name:"
-                            type="text"><br>
-                    </p>
-                    <p>
-                        <label for="empnlastname">Employee Last Name: </label>
-                        <input id="empnlastname" name="nemp_last_name" placeholder="Enter new last name:"
-                            type="text"><br>
-                    </p>
-                    <p>
-                        <input type="submit" name="UPDATEEMP" value="   Update Employee Information    ">
-                    </p><br>
-                    <p>
-                        <label for="employeeid2">Employee ID: </label>
-                        <input id="employeeid2" name="demp_id" placeholder="Enter employee id:" type="text"><br>
-                    </p>
-                    <p>
-                        <input type="submit" name="DELETEEMP" value="   Delete Employee Information    ">
-                    </p>
-                </form>
-            </div>
-        </div>
-        <hr style="width:100%;">
-        <?php
+    <div id="newmasonry" style="display:inline;">
+      <div id="new2" style=" display:inline; background-color:pink;">
+        <h2 style="text-align:center;">EMPLOYEE INFORMATION</h2>
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+          <p>
+            <label for="employeeid">Employee ID: </label>
+            <input id="employeeid" name="emp_id" placeholder="Enter employee id:" type="text"><br>
+          </p>
+          <p>
+            <label for="employeetype">Employee Type: </label>
+            <input id="employeetype" name="emp_type" placeholder="Enter employee type:" type="text"><br>
+          </p>
+          <p>
+            <label for="empfirstname">Employee First Name: </label>
+            <input id="empfirstname" name="emp_first_name" placeholder="Enter employee first name:" type="text"><br>
+          </p>
+          <p>
+            <label for="emplastname">Employee Last Name: </label>
+            <input id="emplastname" name="emp_last_name" placeholder="Enter employee last name:" type="text"><br>
+          </p>
+          <p>
+            <input type="submit" name="INSERTEMP" value="   Insert Employee Information    ">
+          </p><br>
+          <p>
+            <label for="employeeid">Employee ID: </label>
+            <input id="employeeid" name="nemp_id" placeholder="Enter employee id:" type="text"><br>
+          </p>
+          <p>
+            <label for="empnfirstname">Employee First Name: </label>
+            <input id="empnfirstname" name="nemp_first_name" placeholder="Enter new first name:" type="text"><br>
+          </p>
+          <p>
+            <label for="empnlastname">Employee Last Name: </label>
+            <input id="empnlastname" name="nemp_last_name" placeholder="Enter new last name:" type="text"><br>
+          </p>
+          <p>
+            <input type="submit" name="UPDATEEMP" value="   Update Employee Information    ">
+          </p><br>
+          <p>
+            <label for="employeeid2">Employee ID: </label>
+            <input id="employeeid2" name="demp_id" placeholder="Enter employee id:" type="text"><br>
+          </p>
+          <p>
+            <input type="submit" name="DELETEEMP" value="   Delete Employee Information    ">
+          </p>
+        </form>
+      </div>
+    </div>
+    <hr style="width:100%;">
+    <?php
     $patients = "SELECT patient_ID, Fname, Lname, Minit FROM patient";
     echo "<div style=' width:40%; float:left; padding:20px;'><table><caption>PATIENT TABLE</caption><col width='130'><col width='130'><col width='130'><col width='130'><col width='130'><tr><th>Patient ID</th><th>First Name</th><th>Middle Initial</th><th>Last Name</th></tr>";
     $res = $mysqli->query($patients);
@@ -237,66 +232,66 @@ if (isset($_POST['UPDATEEMP'])) {
 
 
     ?>
-    </div>
+  </div>
 
-    <style>
+  <style>
     #newmasonry {
-        text-align: center;
+      text-align: center;
     }
 
     input[type="text"] {
-        width: 250px;
+      width: 250px;
     }
 
     #new {
-        padding: 10px;
-        border-radius: 3px;
-        margin: auto;
-        width: 100%;
+      padding: 10px;
+      border-radius: 3px;
+      margin: auto;
+      width: 100%;
     }
 
     #new input {
-        width: 100%;
-        clear: both;
+      width: 100%;
+      clear: both;
     }
 
     #new2 input {
-        width: 100%;
-        clear: both;
+      width: 100%;
+      clear: both;
     }
 
     #new2 {
-        padding: 10px;
-        border-radius: 3px;
-        margin: auto;
-        width: 50%;
-        float: right;
+      padding: 10px;
+      border-radius: 3px;
+      margin: auto;
+      width: 50%;
+      float: right;
     }
 
     table,
     tr,
     td {
-        border: 1px solid black;
-        margin: 0px;
+      border: 1px solid black;
+      margin: 0px;
     }
 
     td {
-        width: 40px;
+      width: 40px;
     }
 
     .title {
-        text-align: center;
-        color: white;
+      text-align: center;
+      color: white;
     }
 
     body {
-        color: white;
-        background: #B24592;
-        background: -webkit-linear-gradient(to right, #F15F79, #B24592);
-        background: linear-gradient(to right, #F15F79, #B24592);
+      color: white;
+      background: #B24592;
+      background: -webkit-linear-gradient(to right, #F15F79, #B24592);
+      background: linear-gradient(to right, #F15F79, #B24592);
 
     }
-    </style>
+  </style>
 </body>
 
 </html>
