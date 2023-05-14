@@ -77,9 +77,7 @@ INSERT INTO `employee` (`Employee_ID`, `Employee_Type`, `FName`, `LName`) VALUES
 ('r8', 3, 'Jaammes', 'Smitth'),
 ('r9', 3, 'Karrenn', 'Moorre');
 
---
--- Triggers `employee`
---
+
 DELIMITER $$
 CREATE TRIGGER `employee_AFTER_INSERT` AFTER INSERT ON `employee` FOR EACH ROW BEGIN
     IF new.Employee_Type = 1 then
